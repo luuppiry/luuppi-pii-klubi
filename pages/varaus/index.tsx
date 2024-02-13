@@ -33,11 +33,11 @@ const Varaus: NextPage = () => {
         <ContentWrapper>
           <div>
             <p>
-            Alustavan varauksen voit tehdä <a href="https://docs.google.com/forms/d/e/1FAIpQLScoZGF-itX2lWG6HJFpD33blNMHZCCeC3GtM6LWs9FCUpsT_Q/viewform">tällä lomakeella</a> 
+            Alustavan varauksen voit tehdä <a href="https://docs.google.com/forms/d/e/1FAIpQLScoZGF-itX2lWG6HJFpD33blNMHZCCeC3GtM6LWs9FCUpsT_Q/viewform">tällä lomakeella.</a> Lisätietoja tilan vuokrauksesta sähköpostilla <a href="mailto: toimitila@luuppi.fi">toimitila@luuppi.fi</a>.
             </p>
             <p>
             Loppusiivouksen voit tilata yhteistyökumppaniltamme hintaan 120€. 
-            Lisätietoja ja varaus sähköpostilla <a href="mailto: info@juniperlux.fi">info@juniperlux.fi</a>. Varaukset tehtävä 
+            Siivouksesta lisätietoja ja varaus sähköpostilla <a href="mailto: info@juniperlux.fi">info@juniperlux.fi</a>. Siivouksen varaukset tehtävä 
             mielellään 2vko ennen tilaisuutta.
             </p>
           </div>
