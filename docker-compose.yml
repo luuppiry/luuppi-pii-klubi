@@ -6,7 +6,7 @@ services:
         image: luuppi.azurecr.io/pii-klubi:latest
         restart: unless-stopped
         ports:
-            - '3000:3000'
+            - '3002:3002'
         networks:
             - weba-network
 
