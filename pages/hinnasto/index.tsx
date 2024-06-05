@@ -18,7 +18,7 @@ const Hinnasto: NextPage = () => {
           Pe, La: 720€
         </p>
         <p>
-          Ainejärjestöt/killat, opiskelijat:
+					Ainejärjestöt/killat, korkeakouluopiskelijat:
           <br />
           To, Su: 570€
           <br />
