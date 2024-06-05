@@ -1,0 +1,39 @@
+name: Deploy
+
+on:
+    push:
+        branches: ['main']
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        name: Build and Deploy
+        timeout-minutes: 15
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Build and push Docker image
+              uses: azure/docker-login@v1
+              with:
+                  login-server: ${{ secrets.REGISTRY }}
+                  username: ${{ secrets.REGISTRY_USERNAME }}
+                  password: ${{ secrets.REGISTRY_PASSWORD }}
+            - run: |
+                  docker build -t ${{ secrets.REGISTRY }}/pii-klubi:latest .
+                  docker push ${{ secrets.REGISTRY }}/pii-klubi:latest
+
+            - name: Deploy Pii-klubi website
+              uses: appleboy/ssh-action@master
+              with:
+                  host: ${{ secrets.HOST }}
+                  username: ${{ secrets.USERNAME }}
+                  key: ${{ secrets.KEY }}
+                  port: ${{ secrets.PORT }}
+                  script: |
+                      cd luuppi-pii-klubi
+                      git pull
+                      docker login -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }} ${{ secrets.REGISTRY }}
+                      docker pull ${{ secrets.REGISTRY }}/pii-klubi:latest
+                      docker compose down
+                      docker compose up -d
