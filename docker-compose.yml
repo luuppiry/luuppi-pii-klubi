@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+    next:
+        container_name: pii-klubi
+        image: luuppi.azurecr.io/pii-klubi:latest
+        restart: unless-stopped
+        ports:
+            - '3000:3000'
+        networks:
+            - weba-network
+
+#
+# External network handled by luuppi-proxy
+# https://github.com/luuppiry/luuppi-proxy
+#
+networks:
+    weba-network:
+        external: true
