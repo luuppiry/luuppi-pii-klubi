@@ -10,25 +10,14 @@ const FooterContainer = styled.header`
   font-weight: 400;
   font-style: normal;
   width: 100%;
+  
 `;
 
-const SocialMedia = styled.header`
-  background: #5c5c5c;
-  font-family: rigid-square, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 3rem 3rem;
-  grid-gap: 2rem;
-  padding: 2rem 3rem;
-  width: 100%;
-`;
 
 const FooterContent = styled.div`
   display: flex;
   color: #f8f7fe;
-  padding: 3rem 3.5rem;
+  padding: 2rem;
   justify-content: space-between;
   align-items: center;
   @media (max-width: 750px) {
@@ -82,22 +71,6 @@ const Logo = styled.img`
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      <SocialMedia>
-        <a
-          href="https://www.facebook.com/piiklubi"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Facebook />
-        </a>
-        <a
-          href="https://www.instagram.com/piiklubi"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Instagram />
-        </a>
-      </SocialMedia>
       <FooterContent>
         <LeftSide>
           <Logo src={PiiLogo} alt="Pii-klubi" />
@@ -114,6 +87,20 @@ const Footer: React.FC = () => {
                 www.luuppi.fi
               </a>
             </p>
+            <a
+              href="https://www.facebook.com/piiklubi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Facebook />
+            </a>
+            <a
+              href="https://www.instagram.com/piiklubi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Instagram />
+            </a>
           </Info>
         </LeftSide>
         <a href="https://www.rare.fi" target="_blank" rel="noreferrer">

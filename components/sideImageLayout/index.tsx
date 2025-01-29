@@ -4,10 +4,13 @@ import Layout from "../../components/layout";
 import Kansikuva from "../../public/images/kansikuva.jpg";
 
 const BaseGrid = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "img main main";
+  @media (min-width: 950px) { 
+    padding-bottom: 3rem; 
+  }
   @media (max-width: 950px) {
     height: 100%;
     display: flex;
