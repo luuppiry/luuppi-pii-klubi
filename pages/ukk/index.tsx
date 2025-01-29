@@ -1,14 +1,24 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
-import SideImageLayout from "../../components/sideImageLayout";
+import Layout from "../../components/layout";
 
 const Section = styled.div`
   margin-bottom: 2rem;
 `;
+const Text = styled.div`
+  margin: 3rem;
+  @media (max-width: 750px) {
+    margin: 3rem 2rem;
+  }
+  @media (max-width: 500px) {
+    margin: 2rem 1rem;
+  }
+`;
 
 const Ukk: NextPage = () => {
   return (
-    <SideImageLayout>
+    <Layout>
+      <Text>
       <div>
         <h2>Usein Kysytyt Kysymykset</h2>
 
@@ -69,7 +79,6 @@ const Ukk: NextPage = () => {
           </p>
         </Section>
 
-        {/* Siivous */}
         <Section>
           <h3>Siivous</h3>
           <p>
@@ -103,7 +112,6 @@ const Ukk: NextPage = () => {
           </p>
         </Section>
 
-        {/* Saako tilassa... */}
         <Section>
           <h3>Saako tilassa…</h3>
           <p>
@@ -149,7 +157,8 @@ const Ukk: NextPage = () => {
           </p>
         </Section>
       </div>
-    </SideImageLayout>
+      </Text>
+    </Layout>
   );
 };
 
