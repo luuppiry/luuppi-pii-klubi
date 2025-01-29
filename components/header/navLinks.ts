@@ -1,23 +1,26 @@
 export const navLinks = [
-  { name: "Etusivu", path: "/" },
+  {
+    name: "Tilat",
+    path: "/tilat",
+  },
   {
     name: "Hinnasto",
     path: "/hinnasto",
   },
   {
-    name: "Tilat",
-    path: "/tilat",
+    name:"UKK",
+    path: "/ukk"
   },
   {
     name: "Varaus",
     path: "/varaus",
   },
   {
-    name: "Yhteystiedot",
-    path: "/yhteystiedot",
-  },
-  {
     name: "Varausehdot",
     path: "/varausehdot",
+  },
+  {
+    name: "Yhteystiedot",
+    path: "/yhteystiedot",
   },
 ];
