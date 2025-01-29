@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link"; 
 import Navbar from "./navbar";
 import MobileNav from "./mobilenav";
 import Logo from "../../public/images/logo_suora.png";
@@ -22,6 +23,11 @@ const HeaderContainer = styled.header`
   }
 `;
 
+const LogoLink = styled.a`
+  display: flex;
+  align-items: center;
+`;
+
 const Img = styled.img`
   height: 0.8rem;
   width: auto;
@@ -36,7 +42,11 @@ const DesktopNav = styled.div`
 const Header: React.FC = () => {
   return (
     <HeaderContainer>
-      <Img src={Logo} alt="Pii-klubi" />
+      <Link href="/" passHref> 
+        <LogoLink>
+          <Img src={Logo} alt="Pii-klubi" />
+        </LogoLink>
+      </Link>
       <DesktopNav>
         <Navbar />
       </DesktopNav>
