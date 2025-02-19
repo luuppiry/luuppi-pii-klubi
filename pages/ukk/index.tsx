@@ -129,7 +129,7 @@ const Ukk: NextPage = () => {
           <p>
             <strong>Tupakoida?</strong>
             <br />
-            Ei.
+            Ei. Tupakoida saa vain ulkona sille merkityllä paikalla.
           </p>
         </Section>
 
