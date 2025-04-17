@@ -55,8 +55,8 @@ const Ukk: NextPage = () => {
           <p>
             <strong>Pääseekö tilaa katsomaan?</strong>
             <br />
-            Tilaa pääsee katsomaan Luupin toimiston aukioloaikoina maanantaista
-            torstaihin klo 12.00-15.00. Ilmoitathan tulostasi etukäteen{" "}
+            Tilaa pääsee katsomaan Luupin toimiston aukioloaikoina tiistaista
+            torstaihin klo 12.00-14.00. Ilmoitathan tulostasi etukäteen{" "}
             <a href="mailto:hallitus@luuppi.fi">hallitus@luuppi.fi</a>. Mikäli
             et pääse annettuina aukioloaikoina, laita sähköpostia{" "}
             <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>{" "}
