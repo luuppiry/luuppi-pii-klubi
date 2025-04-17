@@ -26,7 +26,7 @@ const Ukk: NextPage = () => {
           <h3>Löytötavarat</h3>
           <p>
             Löytötavaroita voi tulla kysymään Pii-Klubilta Luupin toimiston
-            aukioloaikoina maanantaista torstaihin klo 12.00-15.00. Mikäli et
+            aukioloaikoina tiistaista torstaihin klo 12.00-14.00. Mikäli et
             pääse paikalle, voit myös laittaa sähköpostia{" "}
             <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>.
           </p>
