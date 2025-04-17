@@ -34,6 +34,10 @@ const Yhteystiedot: NextPage = () => {
       <div>
         <h2>Yhteystiedot</h2>
         <p>
+          Aukioloajat <br />
+          Ti - To: 12:00-14:00
+        </p>
+        <p>
           Luupin toimitilatiimi:{" "}
           <a href="mailto: toimitila@luuppi.fi">toimitila@luuppi.fi</a>
           <br />
