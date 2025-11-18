@@ -25,9 +25,7 @@ const Ukk: NextPage = () => {
         <Section>
           <h3>Löytötavarat</h3>
           <p>
-            Löytötavaroita voi tulla kysymään Pii-Klubilta Luupin toimiston
-            aukioloaikoina tiistaista torstaihin klo 12.00-14.00. Mikäli et
-            pääse paikalle, voit myös laittaa sähköpostia{" "}
+            Löytötavaroita voi tiedustella laittamalla sähköpostia{" "}
             <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>.
           </p>
         </Section>
@@ -55,12 +53,10 @@ const Ukk: NextPage = () => {
           <p>
             <strong>Pääseekö tilaa katsomaan?</strong>
             <br />
-            Tilaa pääsee katsomaan Luupin toimiston aukioloaikoina tiistaista
-            torstaihin klo 12.00-14.00. Ilmoitathan tulostasi etukäteen{" "}
-            <a href="mailto:hallitus@luuppi.fi">hallitus@luuppi.fi</a>. Mikäli
-            et pääse annettuina aukioloaikoina, laita sähköpostia{" "}
+            Tilaa pääsee katsomaan varaamalla esittelyaika. 
+            Laita sähköpostia{" "}
             <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>{" "}
-            erillisen esittelyajan varaamiseksi.
+            esittelyajan varaamiseksi.
           </p>
         </Section>
 
