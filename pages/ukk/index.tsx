@@ -53,7 +53,7 @@ const Ukk: NextPage = () => {
           <p>
             <strong>Pääseekö tilaa katsomaan?</strong>
             <br />
-            Tilaa pääsee katsomaan varaamalla esittelyaika. 
+            Tilaa pääsee katsomaan varaamalla esittelyajan. 
             Laita sähköpostia{" "}
             <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>{" "}
             esittelyajan varaamiseksi.
