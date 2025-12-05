@@ -36,7 +36,7 @@ const Varaus: NextPage = () => {
             Alustavan varauksen voit tehdä <a href="https://docs.google.com/forms/d/e/1FAIpQLScoZGF-itX2lWG6HJFpD33blNMHZCCeC3GtM6LWs9FCUpsT_Q/viewform">tällä lomakeella.</a> Lisätietoja tilan vuokrauksesta sähköpostilla <a href="mailto: toimitila@luuppi.fi">toimitila@luuppi.fi</a>.
             </p>
             <p>
-              Loppusiivouksen voit tilata yhteistyökumppaniltamme hintaan 135€.
+              Loppusiivouksen voit tilata yhteistyökumppaniltamme hintaan 120€.
               Siivouksesta lisätietoja ja varaus sähköpostilla{" "}
               <a href="mailto: info@juniperlux.fi">info@juniperlux.fi</a>.
               Siivouksen varaukset tehtävä mielellään 2vko ennen tilaisuutta.
