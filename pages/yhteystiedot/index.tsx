@@ -35,7 +35,7 @@ const Yhteystiedot: NextPage = () => {
         <h2>Yhteystiedot</h2>
         <p>
           Aukioloajat <br />
-          Ti - To: 12:00-14:00
+          Pii-Klubilla ei ole säännöllisiä päivystysaikoja. Mahdollisista päivystyksistä tiedotetaan <a href="https://t.me/LuupinTiedotus">Luupin Telegram</a>-tiedotuskanavalla.
         </p>
         <p>
           Luupin toimitilatiimi:{" "}
