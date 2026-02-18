@@ -41,6 +41,9 @@ const Varaus: NextPage = () => {
               <a href="mailto: info@juniperlux.fi">info@juniperlux.fi</a>.
               Siivouksen varaukset tehtävä mielellään 2vko ennen tilaisuutta.
             </p>
+            <p>
+              *Palkki päivän kohdalla tarkoittaa, että tila on varattu kyseisenä päivänä.
+            </p>
           </div>
           {process.browser && (
             <CalendarWrapper>
