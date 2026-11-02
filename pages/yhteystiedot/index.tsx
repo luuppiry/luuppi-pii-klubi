@@ -1,9 +1,12 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Trans, useTranslation } from "next-i18next";
 import SideImageLayout from "../../components/sideImageLayout";
 
 const Yhteystiedot: NextPage = () => {
+  const { t } = useTranslation("yhteystiedot");
   const [mapWidth, getDimension] = useState(0);
 
   const setDimension = () => {
@@ -32,16 +35,20 @@ const Yhteystiedot: NextPage = () => {
   return (
     <SideImageLayout>
       <div>
-        <h2>Yhteystiedot</h2>
+        <h2>{t("heading")}</h2>
         <p>
-          Aukioloajat <br />
-          Pii-Klubilla ei ole säännöllisiä päivystysaikoja. Mahdollisista päivystyksistä tiedotetaan <a href="https://t.me/LuupinTiedotus">Luupin Telegram</a>-tiedotuskanavalla.
+          {t("hours.label")} <br />
+          <Trans
+            t={t}
+            i18nKey="hours.text"
+            components={{ 1: <a href="https://t.me/LuupinTiedotus" /> }}
+          />
         </p>
         <p>
-          Luupin toimitilatiimi:{" "}
+          {t("team")}{" "}
           <a href="mailto: toimitila@luuppi.fi">toimitila@luuppi.fi</a>
           <br />
-          Osoite: Yliopistonkatu 58B, 33100 Tampere
+          {t("address")}
           <br />
           <a href="https://www.luuppi.fi" target="_blank" rel="noreferrer">
             www.luuppi.fi
@@ -56,5 +63,11 @@ const Yhteystiedot: NextPage = () => {
     </SideImageLayout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ["yhteystiedot", "common"])),
+  },
+});
 
 export default Yhteystiedot;

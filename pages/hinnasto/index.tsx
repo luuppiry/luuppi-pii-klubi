@@ -1,4 +1,6 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Trans, useTranslation } from "next-i18next";
 import styled from "styled-components";
 import SideImageLayout from "../../components/sideImageLayout";
 
@@ -7,45 +9,54 @@ const Overline = styled.span`
 `;
 
 const Hinnasto: NextPage = () => {
+  const { t } = useTranslation("hinnasto");
+
   return (
     <SideImageLayout>
       <div>
-        <h2>Hinnasto</h2>
+        <h2>{t("heading")}</h2>
         <p>
-          Yritykset, yksityishenkilöt: <br />
-          Su-To: 700€
+          {t("tiers.companies.label")}: <br />
+          {t("tiers.companies.weekday")}
           <br />
-          Pe-La: 790€
+          {t("tiers.companies.weekend")}
         </p>
         <p>
-		  Ainejärjestöt/killat, korkeakouluopiskelijat ja Luuppi-alumnit:
+          {t("tiers.associations.label")}:
           <br />
-          Su-To: 560€
+          {t("tiers.associations.weekday")}
           <br />
-          Pe-La: 650€
+          {t("tiers.associations.weekend")}
         </p>
         <p>
-          Luuppi-opiskelijat*:
+          {t("tiers.luuppiStudents.label")}:
           <br />
-          Su-To: 420€
-		  <br />
-          Pe-La: 510€
+          {t("tiers.luuppiStudents.weekday")}
+          <br />
+          {t("tiers.luuppiStudents.weekend")}
         </p>
         <p>
-		  Mikäli olet saanut varausvahvistuksen ennen 13.1.2026, käytetään vuokrauksessa vanhaa hinnastoa. <br />
-		  <br />
-		  HUOM! Maanantaisin, tiistaisin ja keskiviikkoisin tila ei ole oletusarvoisesti varattavissa. 
-		  Voit kuitenkin kysellä mahdollisuuksia <a href="mailto: toimitila@luuppi.fi">toimitila@luuppi.fi!</a> <br />
-		  Wapun aikana (13.4. - 1.5.) tila on varattavissa viikon jokaisena päivänä. <br />
-		  <br />
-		  Hintoihin lisätään sesonkilisä 100€ marras- ja joulukuussa. <br />
-		  Vuokraus sisältää 12h vuokra-aikaa, jonka jälkeen lisätunteja on mahdollista ostaa hintaan 50€/alkava 4h. <br />
-		  <br />
-		  *Luupin jäsenet, joilla on aktiivinen opiskeluoikeus.
+          <Trans
+            t={t}
+            i18nKey="notes.availabilityPre"
+            components={{ 1: <a href="mailto: toimitila@luuppi.fi" /> }}
+          />{" "}
+          <br />
+          {t("notes.wappu")} <br />
+          <br />
+          {t("notes.seasonalFee")} <br />
+          <br />
+          {t("notes.membership")}
         </p>
       </div>
     </SideImageLayout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ["hinnasto", "common"])),
+  },
+});
 
 export default Hinnasto;

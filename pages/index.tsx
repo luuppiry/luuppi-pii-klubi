@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 import Layout from "../components/layout";
 import FrontpageInfo from "../components/frontpageInfo";
 import styled from "styled-components";
@@ -28,6 +30,8 @@ const Lift = styled.div`
 `;
 
 const Home: NextPage = () => {
+  const { t } = useTranslation(["home", "common"]);
+
   return (
     <div>
       <Layout>
@@ -35,14 +39,10 @@ const Home: NextPage = () => {
           <HeaderImage src={Kansikuva} alt="kansikuva" />
 
           <Lift>
-            <h2>Pii-Klubi - juhlatila kaikkiin tarpeisiin</h2>
-            <p>
-              Pii-Klubi on aivan Tampereen keskustan tuntumassa sijaitseva hyvin
-              varusteltu juhlatila. Tilasta löytyy avara juhlasali sekä upea
-              sauna!
-            </p>
+            <h2>{t("lift.heading")}</h2>
+            <p>{t("lift.text")}</p>
             <Link href="/tilat" passHref>
-              <button>Tutustu tiloihin</button>
+              <button>{t("common:buttons.exploreSpaces")}</button>
             </Link>
           </Lift>
           <FrontpageInfo />
@@ -51,5 +51,11 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ["home", "common"])),
+  },
+});
 
 export default Home;

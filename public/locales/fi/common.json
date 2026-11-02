@@ -12,7 +12,8 @@
     "exploreSpaces": "Tutustu tiloihin"
   },
   "footer": {
-    "address": "Yliopistonkatu 58b<br />33100 Tampere",
+    "addressLine1": "Yliopistonkatu 58b",
+    "addressLine2": "33100 Tampere",
     "email": "toimitila@luuppi.fi",
     "website": "www.luuppi.fi"
   },

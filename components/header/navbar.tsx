@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { navLinks } from "./navLinks";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 interface NavItemProps {
   isActive?: boolean;
@@ -48,14 +49,15 @@ const NavItem = styled.a<NavItemProps>`
 
 const Navbar: React.FC = () => {
   const router = useRouter();
+  const { t } = useTranslation("common");
 
   return (
     <NavbarContainer>
       {navLinks.map((link) => {
         return (
-          <Link href={link.path} key={link.name} passHref>
+          <Link href={link.path} key={link.key} passHref>
             <NavItem isActive={router.pathname === link.path ? true : false}>
-              {link.name}
+              {t(`nav.${link.key}`)}
             </NavItem>
           </Link>
         );

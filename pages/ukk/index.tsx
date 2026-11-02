@@ -1,4 +1,6 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Trans, useTranslation } from "next-i18next";
 import styled from "styled-components";
 import Layout from "../../components/layout";
 
@@ -16,140 +18,147 @@ const Text = styled.div`
 `;
 
 const Ukk: NextPage = () => {
+  const { t } = useTranslation("ukk");
+
   return (
     <Layout>
       <Text>
       <div>
-        <h2>Usein Kysytyt Kysymykset</h2>
+        <h2>{t("heading")}</h2>
 
         <Section>
-          <h3>Löytötavarat</h3>
+          <h3>{t("lostItems.heading")}</h3>
           <p>
-            Löytötavaroita voi tiedustella laittamalla sähköpostia{" "}
-            <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>.
+            <Trans
+              t={t}
+              i18nKey="lostItems.text"
+              components={{ 1: <a href="mailto:toimitila@luuppi.fi" /> }}
+            />
           </p>
         </Section>
 
         <Section>
-          <h3>Avainten luovutus</h3>
+          <h3>{t("keys.heading")}</h3>
           <p>
-            <strong>Kuinka/koska saan avaimet?</strong>
+            <strong>{t("keys.when.question")}</strong>
             <br />
-            Avainten luovutus tapahtuu oletuksena vuokrauksen aloitusaikaan
-            Pii-Klubilla.
+            {t("keys.when.answer")}
           </p>
           <p>
-            <strong>Voinko valtuuttaa toisen ihmisen noutamaan avaimet?</strong>
+            <strong>{t("keys.delegate.question")}</strong>
             <br />
-            Kyllä, ilmoita tästä{" "}
-            <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>.
+            <Trans
+              t={t}
+              i18nKey="keys.delegate.answer"
+              components={{ 1: <a href="mailto:toimitila@luuppi.fi" /> }}
+            />
           </p>
           <p>
-            <strong>Kuinka/koska palautan avaimet?</strong>
+            <strong>{t("keys.return.question")}</strong>
             <br />
-            Avaimet jätetään palautelaatikkoon, joka osoitetaan avainten
-            luovutuksen yhteydessä.
+            {t("keys.return.answer")}
           </p>
           <p>
-            <strong>Pääseekö tilaa katsomaan?</strong>
+            <strong>{t("keys.viewing.question")}</strong>
             <br />
-            Tilaa pääsee katsomaan varaamalla esittelyajan. 
-            Laita sähköpostia{" "}
-            <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>{" "}
-            esittelyajan varaamiseksi.
-          </p>
-        </Section>
-
-        <Section>
-          <h3>Laskutus</h3>
-          <p>
-            <strong>Mihin saan laskun?</strong>
-            <br />
-            Lasku toimitetaan varauksen yhteydessä ilmoitettuun sähköpostiin tai
-            verkkolaskutusosoitteeseen.
-          </p>
-          <p>
-            <strong>Milloin saan laskun?</strong>
-            <br />
-            Laskut lähetetään noin kahden viikon kuluessa vuokrauksesta.
+            <Trans
+              t={t}
+              i18nKey="keys.viewing.answer"
+              components={{ 1: <a href="mailto:toimitila@luuppi.fi" /> }}
+            />
           </p>
         </Section>
 
         <Section>
-          <h3>Siivous</h3>
+          <h3>{t("billing.heading")}</h3>
           <p>
-            <strong>Löytyykö tilasta siivoustarvikkeita?</strong>
+            <strong>{t("billing.where.question")}</strong>
             <br />
-            Kyllä. Tilasta löytyy yleis- ja loppusiivoukseen sopivat tarvikkeet.
+            {t("billing.where.answer")}
           </p>
           <p>
-            <strong>Kuinka tilaan loppusiivouksen vuokraukselleni?</strong>
+            <strong>{t("billing.when.question")}</strong>
             <br />
-            Siivouksen voi varata sähköpostilla{" "}
-            <a href="mailto:info@juniperlux.fi">info@juniperlux.fi</a>.
-          </p>
-          <p>
-            <strong>Onko loppusiivousta pakko tilata?</strong>
-            <br />
-            Ei ole. Loppusiivous on mahdollista tehdä myös itse Pii-Klubilta
-            löytyvillä tarvikkeilla.
-          </p>
-          <p>
-            <strong>Mitä loppusiivous maksaa?</strong>
-            <br />
-            Loppusiivous maksaa 135€ (sis. ALV).
-          </p>
-          <p>
-            <strong>Onko loppusiivoukseni vahvistettu?</strong>
-            <br />
-            Emme vastaa siivouksesta, joten kyselyt loppusiivouksista
-            osoitteeseen{" "}
-            <a href="mailto:info@juniperlux.fi">info@juniperlux.fi</a>.
+            {t("billing.when.answer")}
           </p>
         </Section>
 
         <Section>
-          <h3>Saako tilassa…</h3>
+          <h3>{t("cleaning.heading")}</h3>
           <p>
-            <strong>Käyttää savukoneita?</strong>
+            <strong>{t("cleaning.supplies.question")}</strong>
             <br />
-            Ei.
+            {t("cleaning.supplies.answer")}
           </p>
           <p>
-            <strong>Tuoda eläimiä?</strong>
+            <strong>{t("cleaning.booking.question")}</strong>
             <br />
-            Lemmikkejä ei Pii-Klubille saa tuoda, mutta viralliset
-            avustajakoirat ovat sallittuja. Poikkeustapauksissa ota yhteyttä{" "}
-            <a href="mailto:toimitila@luuppi.fi">toimitila@luuppi.fi</a>.
+            <Trans
+              t={t}
+              i18nKey="cleaning.booking.answer"
+              components={{ 1: <a href="mailto:info@juniperlux.fi" /> }}
+            />
           </p>
           <p>
-            <strong>Tupakoida?</strong>
+            <strong>{t("cleaning.mandatory.question")}</strong>
             <br />
-            Ei. Tupakoida saa vain ulkona sille merkityllä paikalla.
+            {t("cleaning.mandatory.answer")}
+          </p>
+          <p>
+            <strong>{t("cleaning.price.question")}</strong>
+            <br />
+            {t("cleaning.price.answer")}
+          </p>
+          <p>
+            <strong>{t("cleaning.confirmed.question")}</strong>
+            <br />
+            <Trans
+              t={t}
+              i18nKey="cleaning.confirmed.answer"
+              components={{ 1: <a href="mailto:info@juniperlux.fi" /> }}
+            />
           </p>
         </Section>
 
         <Section>
-          <h3>Löytyykö tilasta…</h3>
+          <h3>{t("allowed.heading")}</h3>
           <p>
-            <strong>Wifi?</strong>
+            <strong>{t("allowed.smokeMachines.question")}</strong>
             <br />
-            Kyllä. Wifin tiedot löytyvät vaaleanpunaisesta vuokraajan kansiosta
-            Pii-Klubilla.
+            {t("allowed.smokeMachines.answer")}
           </p>
           <p>
-            <strong>Äänentoistolaitteet?</strong>
+            <strong>{t("allowed.animals.question")}</strong>
             <br />
-            Kyllä. Pii-Klubilta löytyy kaksi RCF Art 412A -diskantti + RCF Sub
-            705-AS -subwoofer -yhdistelmää, joilla saa musiikin kuulumaan
-            laadukkaasti ja selkeästi koko juhlasaliin. Äänentoistoon voi
-            yhdistää AUX:n tai Bluetoothin kautta.
+            <Trans
+              t={t}
+              i18nKey="allowed.animals.answer"
+              components={{ 1: <a href="mailto:toimitila@luuppi.fi" /> }}
+            />
           </p>
           <p>
-            <strong>Mikrofonit?</strong>
+            <strong>{t("allowed.smoking.question")}</strong>
             <br />
-            Kyllä, Pii-Klubilta löytyy kaksi mikrofonia, jotka ovat
-            yhdistettynä äänentoistojärjestelmään.
+            {t("allowed.smoking.answer")}
+          </p>
+        </Section>
+
+        <Section>
+          <h3>{t("available.heading")}</h3>
+          <p>
+            <strong>{t("available.wifi.question")}</strong>
+            <br />
+            {t("available.wifi.answer")}
+          </p>
+          <p>
+            <strong>{t("available.soundSystem.question")}</strong>
+            <br />
+            {t("available.soundSystem.answer")}
+          </p>
+          <p>
+            <strong>{t("available.microphones.question")}</strong>
+            <br />
+            {t("available.microphones.answer")}
           </p>
         </Section>
       </div>
@@ -157,5 +166,11 @@ const Ukk: NextPage = () => {
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ["ukk", "common"])),
+  },
+});
 
 export default Ukk;
