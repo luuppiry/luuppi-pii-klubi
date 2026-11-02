@@ -1,0 +1,90 @@
+{
+  "heading": "Frequently Asked Questions",
+  "lostItems": {
+    "heading": "Lost property",
+    "text": "You can ask about lost property by emailing <1>toimitila@luuppi.fi</1>."
+  },
+  "keys": {
+    "heading": "Handing over the keys",
+    "when": {
+      "question": "How/when do I get the keys?",
+      "answer": "By default, the keys are handed over at Pii-Klubi at the start time of the rental."
+    },
+    "delegate": {
+      "question": "Can I authorize someone else to pick up the keys?",
+      "answer": "Yes, let us know at <1>toimitila@luuppi.fi</1>."
+    },
+    "return": {
+      "question": "How/when do I return the keys?",
+      "answer": "The keys are left in the return box, which is pointed out when the keys are handed over."
+    },
+    "viewing": {
+      "question": "Can I come see the space beforehand?",
+      "answer": "You can view the space by booking a viewing time. Email <1>toimitila@luuppi.fi</1> to book a viewing."
+    }
+  },
+  "billing": {
+    "heading": "Billing",
+    "where": {
+      "question": "Where will I get the invoice?",
+      "answer": "The invoice is sent to the email address or e-invoicing address given at the time of booking."
+    },
+    "when": {
+      "question": "When will I get the invoice?",
+      "answer": "Invoices are sent approximately two weeks after the rental."
+    }
+  },
+  "cleaning": {
+    "heading": "Cleaning",
+    "supplies": {
+      "question": "Are cleaning supplies available on site?",
+      "answer": "Yes. The venue has supplies suitable for both general and final cleaning."
+    },
+    "booking": {
+      "question": "How do I book final cleaning for my rental?",
+      "answer": "You can book the cleaning by emailing <1>info@juniperlux.fi</1>."
+    },
+    "mandatory": {
+      "question": "Is final cleaning mandatory?",
+      "answer": "No. Final cleaning can also be done yourself using the supplies available at Pii-Klubi."
+    },
+    "price": {
+      "question": "What does final cleaning cost?",
+      "answer": "Final cleaning costs €135 (incl. VAT)."
+    },
+    "confirmed": {
+      "question": "Is my final cleaning confirmed?",
+      "answer": "We are not responsible for cleaning, so direct any questions about final cleaning to <1>info@juniperlux.fi</1>."
+    }
+  },
+  "allowed": {
+    "heading": "Is it allowed to…",
+    "smokeMachines": {
+      "question": "Use smoke machines?",
+      "answer": "No."
+    },
+    "animals": {
+      "question": "Bring animals?",
+      "answer": "Pets are not allowed at Pii-Klubi, but official service dogs are permitted. For exceptions, contact <1>toimitila@luuppi.fi</1>."
+    },
+    "smoking": {
+      "question": "Smoke?",
+      "answer": "No. Smoking is only allowed outside in the designated area."
+    }
+  },
+  "available": {
+    "heading": "Does the venue have…",
+    "wifi": {
+      "question": "Wifi?",
+      "answer": "Yes. The wifi details can be found in the pink renter's folder at Pii-Klubi."
+    },
+    "soundSystem": {
+      "question": "A sound system?",
+      "answer": "Yes. Pii-Klubi has two RCF Art 412A tweeter + RCF Sub 705-AS subwoofer combinations, which fill the whole hall with high-quality, clear sound. The sound system can be connected via AUX or Bluetooth."
+    },
+    "microphones": {
+      "question": "Microphones?",
+      "answer": "Yes, Pii-Klubi has two microphones connected to the sound system."
+    }
+  }
+}
