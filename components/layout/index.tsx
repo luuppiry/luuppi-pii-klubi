@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
+import { useTranslation } from "next-i18next";
 import Header from "../header";
 import Footer from "../footer";
 
@@ -92,14 +93,13 @@ type Props = {
 };
 
 export default function Layout({ children }: Props) {
+  const { t } = useTranslation("common");
+
   return (
     <div>
       <Head>
-        <title>Pii-Klubi</title>
-        <meta
-          name="description"
-          content="Pii-Klubi, juhla- ja saunatila Tampereen keskustassa."
-        />
+        <title>{t("site.title")}</title>
+        <meta name="description" content={t("site.description")} />
         <link rel="icon" href="/favicon.ico" />
         {/* Fonts: */}
         <link rel="stylesheet" href="https://use.typekit.net/mdv6ewv.css" />

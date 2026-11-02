@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const InfoContainer = styled.div`
   display: grid;
@@ -25,6 +26,7 @@ const InfoContainer = styled.div`
 `;
 
 const FrontpageInfo: React.FC = () => {
+  const { t } = useTranslation(["home", "common"]);
   const [screenWidth, getDimension] = useState(0);
 
   const setDimension = () => {
@@ -49,13 +51,9 @@ const FrontpageInfo: React.FC = () => {
   return (
     <InfoContainer>
       <div>
-        <p>
-          Monipuolinen juhlatila tarjoaa mahdollisuuden järjestää erilaisia
-          tilaisuuksia ja tapahtumia sekä järjestöille, yrityksille että
-          yksityishenkilöille.
-        </p>
+        <p>{t("info.text")}</p>
         <Link href="/varaus" passHref>
-          <button>Varaa tila</button>
+          <button>{t("common:buttons.bookSpace")}</button>
         </Link>
       </div>
       <iframe

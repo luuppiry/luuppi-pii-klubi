@@ -1,0 +1,112 @@
+{
+  "heading": "Usein Kysytyt Kysymykset",
+  "sections": [
+    {
+      "heading": "Löytötavarat",
+      "items": [
+        {
+          "answer": "Löytötavaroita voi tiedustella laittamalla sähköpostia <1>toimitila@luuppi.fi</1>.",
+          "link": "mailto:toimitila@luuppi.fi"
+        }
+      ]
+    },
+    {
+      "heading": "Avainten luovutus",
+      "items": [
+        {
+          "question": "Kuinka/koska saan avaimet?",
+          "answer": "Avainten luovutus tapahtuu oletuksena vuokrauksen aloitusaikaan Pii-Klubilla."
+        },
+        {
+          "question": "Voinko valtuuttaa toisen ihmisen noutamaan avaimet?",
+          "answer": "Kyllä, ilmoita tästä <1>toimitila@luuppi.fi</1>.",
+          "link": "mailto:toimitila@luuppi.fi"
+        },
+        {
+          "question": "Kuinka/koska palautan avaimet?",
+          "answer": "Avaimet jätetään palautelaatikkoon, joka osoitetaan avainten luovutuksen yhteydessä."
+        },
+        {
+          "question": "Pääseekö tilaa katsomaan?",
+          "answer": "Tilaa pääsee katsomaan varaamalla esittelyajan. Laita sähköpostia <1>toimitila@luuppi.fi</1> esittelyajan varaamiseksi.",
+          "link": "mailto:toimitila@luuppi.fi"
+        }
+      ]
+    },
+    {
+      "heading": "Laskutus",
+      "items": [
+        {
+          "question": "Mihin saan laskun?",
+          "answer": "Lasku toimitetaan varauksen yhteydessä ilmoitettuun sähköpostiin tai verkkolaskutusosoitteeseen."
+        },
+        {
+          "question": "Milloin saan laskun?",
+          "answer": "Laskut lähetetään noin kahden viikon kuluessa vuokrauksesta."
+        }
+      ]
+    },
+    {
+      "heading": "Siivous",
+      "items": [
+        {
+          "question": "Löytyykö tilasta siivoustarvikkeita?",
+          "answer": "Kyllä. Tilasta löytyy yleis- ja loppusiivoukseen sopivat tarvikkeet."
+        },
+        {
+          "question": "Kuinka tilaan loppusiivouksen vuokraukselleni?",
+          "answer": "Siivouksen voi varata sähköpostilla <1>info@juniperlux.fi</1>.",
+          "link": "mailto:info@juniperlux.fi"
+        },
+        {
+          "question": "Onko loppusiivousta pakko tilata?",
+          "answer": "Ei ole. Loppusiivous on mahdollista tehdä myös itse Pii-Klubilta löytyvillä tarvikkeilla."
+        },
+        {
+          "question": "Mitä loppusiivous maksaa?",
+          "answer": "Loppusiivous maksaa 135€ (sis. ALV)."
+        },
+        {
+          "question": "Onko loppusiivoukseni vahvistettu?",
+          "answer": "Emme vastaa siivouksesta, joten kyselyt loppusiivouksista osoitteeseen <1>info@juniperlux.fi</1>.",
+          "link": "mailto:info@juniperlux.fi"
+        }
+      ]
+    },
+    {
+      "heading": "Saako tilassa…",
+      "items": [
+        {
+          "question": "Käyttää savukoneita?",
+          "answer": "Ei."
+        },
+        {
+          "question": "Tuoda eläimiä?",
+          "answer": "Lemmikkejä ei Pii-Klubille saa tuoda, mutta viralliset avustajakoirat ovat sallittuja. Poikkeustapauksissa ota yhteyttä <1>toimitila@luuppi.fi</1>.",
+          "link": "mailto:toimitila@luuppi.fi"
+        },
+        {
+          "question": "Tupakoida?",
+          "answer": "Ei. Tupakoida saa vain ulkona sille merkityllä paikalla."
+        }
+      ]
+    },
+    {
+      "heading": "Löytyykö tilasta…",
+      "items": [
+        {
+          "question": "Wifi?",
+          "answer": "Kyllä. Wifin tiedot löytyvät vaaleanpunaisesta vuokraajan kansiosta Pii-Klubilla."
+        },
+        {
+          "question": "Äänentoistolaitteet?",
+          "answer": "Kyllä. Pii-Klubilta löytyy kaksi RCF Art 412A -diskantti + RCF Sub 705-AS -subwoofer -yhdistelmää, joilla saa musiikin kuulumaan laadukkaasti ja selkeästi koko juhlasaliin. Äänentoistoon voi yhdistää AUX:n tai Bluetoothin kautta."
+        },
+        {
+          "question": "Mikrofonit?",
+          "answer": "Kyllä, Pii-Klubilta löytyy kaksi mikrofonia, jotka ovat yhdistettynä äänentoistojärjestelmään."
+        }
+      ]
+    }
+  ]
+}

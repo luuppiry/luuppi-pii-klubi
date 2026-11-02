@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FacebookSquare, InstagramAlt } from "@styled-icons/boxicons-logos";
 import RareLogo from "../../public/images/rare-logo.png";
 import PiiLogo from "../../public/images/logo_val.png";
+import { useTranslation } from "next-i18next";
 
 const FooterContainer = styled.header`
   background: #474747;
@@ -69,6 +70,8 @@ const Logo = styled.img`
 `;
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation("common");
+
   return (
     <FooterContainer>
       <FooterContent>
@@ -76,15 +79,15 @@ const Footer: React.FC = () => {
           <Logo src={PiiLogo} alt="Pii-klubi" />
           <Info>
             <p>
-              Yliopistonkatu 58b <br />
-              33100 Tampere
+              {t("footer.addressLine1")} <br />
+              {t("footer.addressLine2")}
             </p>
             <p>
-              <a href="mailto: toimitila@luuppi.fi">toimitila@luuppi.fi</a>
+              <a href={`mailto: ${t("footer.email")}`}>{t("footer.email")}</a>
             </p>
             <p>
               <a href="https://www.luuppi.fi" target="_blank" rel="noreferrer">
-                www.luuppi.fi
+                {t("footer.website")}
               </a>
             </p>
             <a

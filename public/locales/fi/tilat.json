@@ -1,0 +1,15 @@
+{
+  "intro": "Suuri 270m2:n juhlatila mahdollistaa monenlaisten tapahtumien järjestämisen. Avaran juhlasalin lisäksi tilassa on käytettävissä parvi. Erillinen sauna- ja suihkutila on suuri ja tunnelmallinen. Saunan yhteydessä on pukeutumistila, josta löytyy myös kaapit tavaroiden säilyttämistä varten. Pii-Klubille mahtuu seisten 200 henkilöä ja pöytäkattaukset on mahdollista tehdä jopa 120 hengelle. Juhlasalista ja parvelta löytyy sohvia vapaampaan oleskeluun.",
+  "noLicense": "Tilassa ei ole anniskeluoikeuksia. Tilan siivoaminen ei sisälly vuokrahintaan.",
+  "equipment": {
+    "heading": "Varustelu",
+    "intro": "Vuokraajan käytössä on mm.",
+    "items": [
+      "Pöytiä 19 kpl",
+      "Tuoleja 120 kpl",
+      "Sohvatilaa n. 30 hengelle",
+      "Runsaasti jääkaappitilaa",
+      "Siivousvälineet"
+    ]
+  }
+}

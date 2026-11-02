@@ -1,6 +1,9 @@
+const { i18n } = require("./next-i18next.config");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  i18n,
   images: {
     disableStaticImages: true,
   },
@@ -10,6 +13,7 @@ const withTM = require("next-transpile-modules")([
   "@fullcalendar/common",
   "@babel/preset-react",
   "@fullcalendar/common",
+  "@fullcalendar/core",
   "@fullcalendar/daygrid",
   "@fullcalendar/interaction",
   "@fullcalendar/react",

@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 import styled from "styled-components";
 import Layout from "../../components/layout";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -86,6 +88,8 @@ const SecondText = styled.div`
 `;
 
 const Tilat: NextPage = () => {
+  const { t } = useTranslation(["tilat", "common"]);
+
   return (
     <Layout>
       <BaseGrid>
@@ -102,21 +106,10 @@ const Tilat: NextPage = () => {
           </div>
         </FirstCarousel>
         <FirstText>
-          <p>
-            Suuri 270m2:n juhlatila mahdollistaa monenlaisten tapahtumien
-            järjestämisen. Avaran juhlasalin lisäksi tilassa on käytettävissä
-            parvi. Erillinen sauna- ja suihkutila on suuri ja tunnelmallinen.
-            Saunan yhteydessä on pukeutumistila, josta löytyy myös kaapit
-            tavaroiden säilyttämistä varten. Pii-Klubille mahtuu seisten 200
-            henkilöä ja pöytäkattaukset on mahdollista tehdä jopa 120 hengelle.
-            Juhlasalista ja parvelta löytyy sohvia vapaampaan oleskeluun.
-          </p>
-          <p>
-            Tilassa ei ole anniskeluoikeuksia. Tilan siivoaminen ei sisälly
-            vuokrahintaan.
-          </p>
+          <p>{t("intro")}</p>
+          <p>{t("noLicense")}</p>
           <Link href="/varaus" passHref>
-            <button>Varaa tila</button>
+            <button>{t("common:buttons.bookSpace")}</button>
           </Link>
         </FirstText>
         <SecondCarousel>
@@ -134,19 +127,25 @@ const Tilat: NextPage = () => {
           </div>
         </SecondCarousel>
         <SecondText>
-          <h2>Varustelu</h2>
-          <p>Vuokraajan käytössä on mm.</p>
+          <h2>{t("equipment.heading")}</h2>
+          <p>{t("equipment.intro")}</p>
           <ul>
-            <li>Pöytiä 19 kpl</li>
-            <li>Tuoleja 120 kpl</li>
-            <li>Sohvatilaa n. 30 hengelle</li>
-            <li>Runsaasti jääkaappitilaa</li>
-            <li>Siivousvälineet </li>
+            {(t("equipment.items", { returnObjects: true }) as string[]).map(
+              (item) => (
+                <li key={item}>{item}</li>
+              )
+            )}
           </ul>
         </SecondText>
       </BaseGrid>
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ["tilat", "common"])),
+  },
+});
 
 export default Tilat;

@@ -1,9 +1,13 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Trans, useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import SideImageLayout from "../../components/sideImageLayout";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import interactionPlugin from "@fullcalendar/interaction";
+import fiLocale from "@fullcalendar/core/locales/fi";
 import styled from "styled-components";
 
 const CalendarWrapper = styled.div`
@@ -26,24 +30,35 @@ const ContentWrapper = styled.div`
 `;
 
 const Varaus: NextPage = () => {
+  const { t } = useTranslation("varaus");
+  const { locale } = useRouter();
+
   return (
     <SideImageLayout>
       <>
-        <h2>Varaus</h2>
+        <h2>{t("heading")}</h2>
         <ContentWrapper>
           <div>
             <p>
-            Alustavan varauksen voit tehdä <a href="https://docs.google.com/forms/d/e/1FAIpQLScoZGF-itX2lWG6HJFpD33blNMHZCCeC3GtM6LWs9FCUpsT_Q/viewform">tällä lomakeella.</a> Lisätietoja tilan vuokrauksesta sähköpostilla <a href="mailto: toimitila@luuppi.fi">toimitila@luuppi.fi</a>.
+              <Trans
+                t={t}
+                i18nKey="intro"
+                components={{
+                  1: (
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScoZGF-itX2lWG6HJFpD33blNMHZCCeC3GtM6LWs9FCUpsT_Q/viewform" />
+                  ),
+                  2: <a href="mailto: toimitila@luuppi.fi" />,
+                }}
+              />
             </p>
             <p>
-              Loppusiivouksen voit tilata yhteistyökumppaniltamme hintaan 120€.
-              Siivouksesta lisätietoja ja varaus sähköpostilla{" "}
-              <a href="mailto: info@juniperlux.fi">info@juniperlux.fi</a>.
-              Siivouksen varaukset tehtävä mielellään 2vko ennen tilaisuutta.
+              <Trans
+                t={t}
+                i18nKey="cleaning"
+                components={{ 1: <a href="mailto: info@juniperlux.fi" /> }}
+              />
             </p>
-            <p>
-              *Palkki päivän kohdalla tarkoittaa, että tila on varattu kyseisenä päivänä.
-            </p>
+            <p>{t("legend")}</p>
           </div>
           {process.browser && (
             <CalendarWrapper>
@@ -55,7 +70,8 @@ const Varaus: NextPage = () => {
                 ]}
                 initialView="dayGridMonth"
                 googleCalendarApiKey="AIzaSyCdZG-_vkWwYv-jB_yHQmZyM76l-EATdmo"
-                locale={"fi"}
+                locales={[fiLocale]}
+                locale={locale}
                 firstDay={1}
                 events={{
                   googleCalendarId:
@@ -76,5 +92,11 @@ const Varaus: NextPage = () => {
     </SideImageLayout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ["varaus", "common"])),
+  },
+});
 
 export default Varaus;

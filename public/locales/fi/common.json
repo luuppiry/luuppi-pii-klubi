@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "tilat": "Tilat",
+    "hinnasto": "Hinnasto",
+    "ukk": "UKK",
+    "varaus": "Varaus",
+    "varausehdot": "Varausehdot",
+    "yhteystiedot": "Yhteystiedot"
+  },
+  "buttons": {
+    "bookSpace": "Varaa tila",
+    "exploreSpaces": "Tutustu tiloihin"
+  },
+  "footer": {
+    "addressLine1": "Yliopistonkatu 58b",
+    "addressLine2": "33100 Tampere",
+    "email": "toimitila@luuppi.fi",
+    "website": "www.luuppi.fi"
+  },
+  "site": {
+    "title": "Pii-Klubi",
+    "description": "Pii-Klubi, juhla- ja saunatila Tampereen keskustassa."
+  },
+  "language": {
+    "fi": "Suomeksi",
+    "en": "In English"
+  }
+}

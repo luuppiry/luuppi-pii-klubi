@@ -1,0 +1,26 @@
+{
+  "heading": "Pricing",
+  "tiers": [
+    {
+      "label": "Companies, private individuals",
+      "weekday": "Sun-Thu: €700",
+      "weekend": "Fri-Sat: €790"
+    },
+    {
+      "label": "Subject associations/guilds, university students and Luuppi alumnis",
+      "weekday": "Sun-Thu: €560",
+      "weekend": "Fri-Sat: €650"
+    },
+    {
+      "label": "Luuppi students*",
+      "weekday": "Sun-Thu: €420",
+      "weekend": "Fri-Sat: €510"
+    }
+  ],
+  "notes": {
+    "availabilityPre": "NOTE! On Mondays, Tuesdays and Wednesdays the space is not available for booking by default. You can still ask about availability at <1>toimitila@luuppi.fi!</1>",
+    "wappu": "During Wappu (13 Apr - 1 May), the space is available every day of the week.",
+    "seasonalFee": "A seasonal surcharge of €100 is added to prices in November and December. The rental includes 12 hours of rental time, after which additional hours can be purchased for €50 per started 4-hour block.",
+    "membership": "*Luuppi members with an active right to study."
+  }
+}
