@@ -10,6 +10,7 @@
   "dependencies": {
     "@babel/preset-react": "^7.16.7",
     "@fullcalendar/common": "^5.11.0",
+    "@fullcalendar/core": "5.11.0",
     "@fullcalendar/daygrid": "^5.11.0",
     "@fullcalendar/google-calendar": "^5.11.0",
     "@fullcalendar/icalendar": "^5.10.1",

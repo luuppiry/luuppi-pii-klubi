@@ -7,6 +7,7 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import interactionPlugin from "@fullcalendar/interaction";
+import fiLocale from "@fullcalendar/core/locales/fi";
 import styled from "styled-components";
 
 const CalendarWrapper = styled.div`
@@ -69,6 +70,7 @@ const Varaus: NextPage = () => {
                 ]}
                 initialView="dayGridMonth"
                 googleCalendarApiKey="AIzaSyCdZG-_vkWwYv-jB_yHQmZyM76l-EATdmo"
+                locales={[fiLocale]}
                 locale={locale}
                 firstDay={1}
                 events={{

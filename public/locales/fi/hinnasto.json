@@ -1,22 +1,22 @@
 {
   "heading": "Hinnasto",
-  "tiers": {
-    "companies": {
+  "tiers": [
+    {
       "label": "Yritykset, yksityishenkilöt",
       "weekday": "Su-To: 700€",
       "weekend": "Pe-La: 790€"
     },
-    "associations": {
+    {
       "label": "Ainejärjestöt/killat, korkeakouluopiskelijat ja Luuppi-alumnit",
       "weekday": "Su-To: 560€",
       "weekend": "Pe-La: 650€"
     },
-    "luuppiStudents": {
+    {
       "label": "Luuppi-opiskelijat*",
       "weekday": "Su-To: 420€",
       "weekend": "Pe-La: 510€"
     }
-  },
+  ],
   "notes": {
     "availabilityPre": "HUOM! Maanantaisin, tiistaisin ja keskiviikkoisin tila ei ole oletusarvoisesti varattavissa. Voit kuitenkin kysellä mahdollisuuksia <1>toimitila@luuppi.fi!</1>",
     "wappu": "Wapun aikana (13.4. - 1.5.) tila on varattavissa viikon jokaisena päivänä.",

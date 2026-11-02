@@ -1,5 +1,0 @@
-yarn run v1.22.22
-$ next dev
-ready - started server on 0.0.0.0:3001, url: http://localhost:3001
-info  - automatically enabled Fast Refresh for 1 custom loader
-event - compiled client and server successfully in 1426 ms (172 modules)

@@ -1,22 +1,22 @@
 {
   "heading": "Pricing",
-  "tiers": {
-    "companies": {
+  "tiers": [
+    {
       "label": "Companies, private individuals",
       "weekday": "Sun-Thu: €700",
       "weekend": "Fri-Sat: €790"
     },
-    "associations": {
+    {
       "label": "Subject associations/guilds, university students and Luuppi alumnis",
       "weekday": "Sun-Thu: €560",
       "weekend": "Fri-Sat: €650"
     },
-    "luuppiStudents": {
+    {
       "label": "Luuppi students*",
       "weekday": "Sun-Thu: €420",
       "weekend": "Fri-Sat: €510"
     }
-  },
+  ],
   "notes": {
     "availabilityPre": "NOTE! On Mondays, Tuesdays and Wednesdays the space is not available for booking by default. You can still ask about availability at <1>toimitila@luuppi.fi!</1>",
     "wappu": "During Wappu (13 Apr - 1 May), the space is available every day of the week.",

@@ -17,8 +17,20 @@ const Text = styled.div`
   }
 `;
 
+type FaqItem = {
+  question?: string;
+  answer: string;
+  link?: string;
+};
+
+type FaqSection = {
+  heading: string;
+  items: FaqItem[];
+};
+
 const Ukk: NextPage = () => {
   const { t } = useTranslation("ukk");
+  const sections = t("sections", { returnObjects: true }) as FaqSection[];
 
   return (
     <Layout>
@@ -26,141 +38,29 @@ const Ukk: NextPage = () => {
       <div>
         <h2>{t("heading")}</h2>
 
-        <Section>
-          <h3>{t("lostItems.heading")}</h3>
-          <p>
-            <Trans
-              t={t}
-              i18nKey="lostItems.text"
-              components={{ 1: <a href="mailto:toimitila@luuppi.fi" /> }}
-            />
-          </p>
-        </Section>
-
-        <Section>
-          <h3>{t("keys.heading")}</h3>
-          <p>
-            <strong>{t("keys.when.question")}</strong>
-            <br />
-            {t("keys.when.answer")}
-          </p>
-          <p>
-            <strong>{t("keys.delegate.question")}</strong>
-            <br />
-            <Trans
-              t={t}
-              i18nKey="keys.delegate.answer"
-              components={{ 1: <a href="mailto:toimitila@luuppi.fi" /> }}
-            />
-          </p>
-          <p>
-            <strong>{t("keys.return.question")}</strong>
-            <br />
-            {t("keys.return.answer")}
-          </p>
-          <p>
-            <strong>{t("keys.viewing.question")}</strong>
-            <br />
-            <Trans
-              t={t}
-              i18nKey="keys.viewing.answer"
-              components={{ 1: <a href="mailto:toimitila@luuppi.fi" /> }}
-            />
-          </p>
-        </Section>
-
-        <Section>
-          <h3>{t("billing.heading")}</h3>
-          <p>
-            <strong>{t("billing.where.question")}</strong>
-            <br />
-            {t("billing.where.answer")}
-          </p>
-          <p>
-            <strong>{t("billing.when.question")}</strong>
-            <br />
-            {t("billing.when.answer")}
-          </p>
-        </Section>
-
-        <Section>
-          <h3>{t("cleaning.heading")}</h3>
-          <p>
-            <strong>{t("cleaning.supplies.question")}</strong>
-            <br />
-            {t("cleaning.supplies.answer")}
-          </p>
-          <p>
-            <strong>{t("cleaning.booking.question")}</strong>
-            <br />
-            <Trans
-              t={t}
-              i18nKey="cleaning.booking.answer"
-              components={{ 1: <a href="mailto:info@juniperlux.fi" /> }}
-            />
-          </p>
-          <p>
-            <strong>{t("cleaning.mandatory.question")}</strong>
-            <br />
-            {t("cleaning.mandatory.answer")}
-          </p>
-          <p>
-            <strong>{t("cleaning.price.question")}</strong>
-            <br />
-            {t("cleaning.price.answer")}
-          </p>
-          <p>
-            <strong>{t("cleaning.confirmed.question")}</strong>
-            <br />
-            <Trans
-              t={t}
-              i18nKey="cleaning.confirmed.answer"
-              components={{ 1: <a href="mailto:info@juniperlux.fi" /> }}
-            />
-          </p>
-        </Section>
-
-        <Section>
-          <h3>{t("allowed.heading")}</h3>
-          <p>
-            <strong>{t("allowed.smokeMachines.question")}</strong>
-            <br />
-            {t("allowed.smokeMachines.answer")}
-          </p>
-          <p>
-            <strong>{t("allowed.animals.question")}</strong>
-            <br />
-            <Trans
-              t={t}
-              i18nKey="allowed.animals.answer"
-              components={{ 1: <a href="mailto:toimitila@luuppi.fi" /> }}
-            />
-          </p>
-          <p>
-            <strong>{t("allowed.smoking.question")}</strong>
-            <br />
-            {t("allowed.smoking.answer")}
-          </p>
-        </Section>
-
-        <Section>
-          <h3>{t("available.heading")}</h3>
-          <p>
-            <strong>{t("available.wifi.question")}</strong>
-            <br />
-            {t("available.wifi.answer")}
-          </p>
-          <p>
-            <strong>{t("available.soundSystem.question")}</strong>
-            <br />
-            {t("available.soundSystem.answer")}
-          </p>
-          <p>
-            <strong>{t("available.microphones.question")}</strong>
-            <br />
-            {t("available.microphones.answer")}
-          </p>
-        </Section>
+        {sections.map((section) => (
+          <Section key={section.heading}>
+            <h3>{section.heading}</h3>
+            {section.items.map((item) => (
+              <p key={item.question ?? item.answer}>
+                {item.question && (
+                  <>
+                    <strong>{item.question}</strong>
+                    <br />
+                  </>
+                )}
+                {item.link ? (
+                  <Trans
+                    defaults={item.answer}
+                    components={{ 1: <a href={item.link} /> }}
+                  />
+                ) : (
+                  item.answer
+                )}
+              </p>
+            ))}
+          </Section>
+        ))}
       </div>
       </Text>
     </Layout>

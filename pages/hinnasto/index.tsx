@@ -8,33 +8,28 @@ const Overline = styled.span`
   text-decoration: line-through;
 `;
 
+type Tier = {
+  label: string;
+  weekday: string;
+  weekend: string;
+};
+
 const Hinnasto: NextPage = () => {
   const { t } = useTranslation("hinnasto");
+  const tiers = t("tiers", { returnObjects: true }) as Tier[];
 
   return (
     <SideImageLayout>
       <div>
         <h2>{t("heading")}</h2>
-        <p>
-          {t("tiers.companies.label")}: <br />
-          {t("tiers.companies.weekday")}
-          <br />
-          {t("tiers.companies.weekend")}
-        </p>
-        <p>
-          {t("tiers.associations.label")}:
-          <br />
-          {t("tiers.associations.weekday")}
-          <br />
-          {t("tiers.associations.weekend")}
-        </p>
-        <p>
-          {t("tiers.luuppiStudents.label")}:
-          <br />
-          {t("tiers.luuppiStudents.weekday")}
-          <br />
-          {t("tiers.luuppiStudents.weekend")}
-        </p>
+        {tiers.map((tier) => (
+          <p key={tier.label}>
+            {tier.label}: <br />
+            {tier.weekday}
+            <br />
+            {tier.weekend}
+          </p>
+        ))}
         <p>
           <Trans
             t={t}

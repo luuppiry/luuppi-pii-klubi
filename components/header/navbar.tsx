@@ -4,6 +4,7 @@ import Link from "next/link";
 import { navLinks } from "./navLinks";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+import LanguageSwitcher from "./languageSwitcher";
 
 interface NavItemProps {
   isActive?: boolean;
@@ -62,6 +63,7 @@ const Navbar: React.FC = () => {
           </Link>
         );
       })}
+      <LanguageSwitcher />
     </NavbarContainer>
   );
 };
